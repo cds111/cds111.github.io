@@ -1,16 +1,20 @@
-var location1 = Math.floor(Math.random() * 6);
-var location2 = Math.floor(Math.random() * 6);
-var location3 = Math.floor(Math.random() * 6);
+var location1 = 0;
+var location2 = 0;
+var location3 = 0;
 var guess;
 var hits = 0;
 var guesses = 0;
 var isSunk = false;
 
-while ( ( location1 != location2 ) & ( location1 != location3 ) & ( location2 != location3 )) {
-    location1 = Math.floor(Math.random() * 6);
-    location2 = Math.floor(Math.random() * 6);
-    location3 = Math.floor(Math.random() * 6);
-}
+function getRndInteger(min, max) {
+    return Math.floor(Math.random() * (max - min + 1) ) + min;
+  }
+
+location2 = getRndInteger(1, 5);
+location1 = location2 - 1;
+location3 = location2 + 1;
+
+alert(location1 + location2 + location3);
 
 while (isSunk == false) {
     guess = prompt("Ready, aim, fire! (enter a number from 0-6):");
