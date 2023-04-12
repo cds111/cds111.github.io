@@ -14,8 +14,6 @@ location2 = getRndInteger(1, 5);
 location1 = location2 - 1;
 location3 = location2 + 1;
 
-alert(location1 + location2 + location3);
-
 while (isSunk == false) {
     guess = prompt("Ready, aim, fire! (enter a number from 0-6):");
         if (guess < 0 || guess > 6) {
