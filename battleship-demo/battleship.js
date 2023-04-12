@@ -1,10 +1,16 @@
-var location1 = 3;
-var location2 = 4;
-var location3 = 5;
+var location1 = Math.random() * 6;
+var location2 = Math.random() * 6;
+var location3 = Math.random() * 6;
 var guess;
 var hits = 0;
 var guesses = 0;
 var isSunk = false;
+
+while ( ( location1 != location2 ) & ( location1 != location3 ) & ( location2 != location3 )) {
+    location1 = Math.random() * 6;
+    location2 = Math.random() * 6;
+    location3 = Math.random() * 6;
+}
 
 while (isSunk == false) {
     guess = prompt("Ready, aim, fire! (enter a number from 0-6):");
